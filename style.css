@@ -1,0 +1,65 @@
+/* Общие стили для всех устройств */
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: #333;
+}
+
+P {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #ccc;
+}
+
+.board {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+    margin: 20px auto;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.result {
+    margin: 20px auto;
+    font-size: 24px;
+}
+
+.reset {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Стили для мобильных устройств (максимальная ширина 768px) */
+@media (max-width: 768px) {
+    .board {
+        grid-template-columns: repeat(3, 70px);
+    }
+    .cell {
+        width: 70px;
+        height: 70px;
+        font-size: 20px;
+    }
+    .reset {
+        padding: 8px 16px;
+    }
+}
